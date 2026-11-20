@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BookNest | Library Management</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top"><div class="brand">📚 BookNest</div><span>Library Management System</span></header>
+<main class="wrap">
+<section class="hero"><div><p class="eyebrow">CAMPUS LIBRARY</p><h1>Find your next<br><em>great read.</em></h1><p>Explore books, issue copies, and track returns in one place.</p></div><div class="hero-art">📖</div></section>
+<section class="stats" id="stats"></section>
+<div class="layout">
+<section class="panel catalog">
+<div class="section-head"><div><p class="eyebrow">COLLECTION</p><h2>Browse books</h2></div><button class="secondary" id="showAdd">+ Add book</button></div>
+<div class="filters"><input id="search" placeholder="Search title or author"><select id="category"><option value="">All categories</option><option>Fiction</option><option>Biography</option><option>Technology</option><option>Self Help</option><option>Other</option></select></div>
+<div id="books" class="books"></div>
+</section>
+<aside class="side">
+<section class="panel"><p class="eyebrow">CHECK OUT</p><h2>Issue a book</h2>
+<form id="issueForm">
+<label>Choose book<select id="issueBook" required></select></label>
+<label>Borrower name<input id="borrower" required placeholder="Your full name"></label>
+<label>Email address<input id="email" type="email" required placeholder="you@example.com"></label>
+<label>Due date<input id="dueDate" type="date" required></label>
+<button class="primary" type="submit">Issue book</button><p class="message" id="issueMsg"></p>
+</form></section>
+<section class="panel"><p class="eyebrow">YOUR LOANS</p><h2>Track a loan</h2>
+<form id="lookupForm" class="lookup"><input id="lookupEmail" type="email" required placeholder="Enter borrower email"><button class="secondary" type="submit">Find</button></form>
+<div id="loans"></div>
+</section>
+<section class="panel hidden" id="addPanel"><p class="eyebrow">NEW ARRIVAL</p><h2>Add a book</h2>
+<form id="addForm">
+<label>Book title<input name="title" required></label><label>Author<input name="author" required></label>
+<label>Category<select name="category"><option>Fiction</option><option>Biography</option><option>Technology</option><option>Self Help</option><option>Other</option></select></label>
+<label>Number of copies<input name="copies" type="number" min="1" value="1" required></label>
+<button class="primary">Save book</button><p class="message" id="addMsg"></p>
+</form></section>
+</aside>
+</div>
+<footer>BookNest • Student project prototype • Use sample records for demonstration</footer>
+</main><script src="app.js"></script></body></html>
